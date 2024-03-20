@@ -1,0 +1,102 @@
+<html>
+
+<head>
+  <title>Tic Tac Toe</title>
+  <meta name="description" content="Multiplayer Tic Tac Toe Game">
+  <link rel="stylesheet" href="./css/index.css">
+</head>
+
+<body class="center">
+  <h1>Tic Tac Toe Game</h2>
+    <div class="center" id="main">
+      <h4>--Play and Enjoy--</h4>
+      <button onclick="start()" class="button">Start a New Game</button>
+      <br>
+      <button onclick="learn()" class="button">Learn How to Play GAME?</button>
+      <br>
+      <button onclick="exit()" class="button">Exit</button>
+    </div>
+    <div class="center" id="learn">
+      <p>
+          You are X, your friend is O. 
+          <br>
+          The first player to get 3 of her marks in a row (up, down, across, or diagonally) is the winner.
+          When all 9 squares are full, the game is over. If no player has 3 marks in a row, the game ends in a tie.
+      </p>
+      <img src="./image/learn.jpg" alt="Learn">
+      <br>
+      <button onclick="main()" class="button">Back</button>
+    </div>
+    <div class="center" id="game">
+      <div class="center" style="margin: 5px;">
+        <h3 id="textPlayer" style="font-size: 0.9rem;">(Current Player 1)</h2>
+          <h3 id="textComd" style="font-size: 0.9rem;">Player 2 can play now...</h2>
+      </div>
+      <canvas id="tic-tac-toe-board" class="center"></canvas>
+    </div>
+    <!-- Script OF Game -->
+    <script src="main.js"></script>
+</body>
+
+
+</html>
+<style>
+body,html
+{
+    margin: 0px;
+    color: #000000;
+    font-size: 1.3rem;
+    font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+}
+
+.center
+{
+  text-align: center;
+}
+
+/* Game Board */
+#tic-tac-toe-board {
+  display: block;
+  margin: auto;
+  margin-top: 20px;
+}
+
+/* Button Style */
+.button {
+  appearance: none;
+  background-color: #000000;
+  border: 2px solid #1A1A1A;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: normal;
+  margin: 5px;
+  min-height: 60px;
+  min-width: 0;
+  outline: none;
+  padding: 0px 24px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  will-change: transform;
+}
+
+.button:disabled {
+  pointer-events: none;
+}
+
+.button:hover {
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+}
+
+.button:active {
+  box-shadow: none;
+  transform: translateY(0);
+}</style>
